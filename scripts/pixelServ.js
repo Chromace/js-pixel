@@ -11,7 +11,7 @@ process.argv.forEach(function (val, index, array) {
 http.createServer(function(req, res){
   var request = url.parse(req.url, true);
   var action = request.pathname;
-  var img = fs.readFileSync('Scripts/PixelServ/Pixel.gif');
+  var img = fs.readFileSync('images/pixel.gif');
 
   res.writeHead(200, {'Content-Type': 'image/gif' });
   res.end(img, 'binary');
